@@ -1,0 +1,81 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+
+# Dependency directories
+jspm_packages/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# MacOS files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage directory
+coverage/
+
+# Lint and formatting
+.eslintcache
+.prettiercache
+
+# Parcel-bundler cache
+.cache/
+
+# Next.js build output
+.next/
+
+# SvelteKit build output
+.svelte-kit/
+
+# Storybook files
+.storybook-out/
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Firebase
+.firebase/
+
+# Local Firebase emulators
+firebase-debug.log
+.firebaserc
+
+# Miscellaneous
+*.bak
+*.orig
