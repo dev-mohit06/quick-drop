@@ -43,7 +43,6 @@ QuickDrop consists of two main components:
 3. Configure environment variables:
    Create a `.env` file in the `server` directory and add the following:
    ```
-   HOST=localhost
    PORT=3000
    REDIS_USERNAME=default
    REDIS_HOST=localhost

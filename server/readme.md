@@ -50,7 +50,6 @@ utils/
 3. Configure environment variables:
    Create a `.env` file in the root directory and add the following:
    ```
-    HOST=localhost
     PORT=3000
 
     #MONGO_URI=
