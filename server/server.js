@@ -20,7 +20,9 @@ const io = new Server(server, {
     cors: {
         origin: corsOptions.origin, // Allow all origins for Socket.io
         methods: ['GET', 'POST'],
+        credentials: true, // Allow credentials
     },
+    transports: ['websocket', 'polling'], // Enable WebSocket and polling transports
 });
 
 // ==============================
