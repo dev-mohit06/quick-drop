@@ -18,7 +18,7 @@ const server = http.createServer(app); // Create HTTP server for Socket.io
 
 const io = new Server(server, {
     cors: {
-        origin: corsOptions.origin, // Allow all origins for Socket.io
+        origin: ["https://quick-drop-ten.vercel.app","http://localhost:3000"], // Allow all origins for Socket.io
         methods: ['GET', 'POST'],
         credentials: true, // Allow credentials
     },
