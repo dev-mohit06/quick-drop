@@ -55,5 +55,5 @@ if(!redisClient.connect()){
 
 // Make sure to use `server.listen()` to listen on both HTTP and WebSocket
 server.listen(PORT, () => {
-    console.log(`🚀 Server running at port ${PORT}/`);
+    console.log(`🚀 Server running at port ${PORT}`);
 });
