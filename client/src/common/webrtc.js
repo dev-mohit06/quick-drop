@@ -28,7 +28,10 @@ class WebRTCService {
   connect(serverUrl) {
     return new Promise((resolve, reject) => {
       try {
-        this.socket = io(serverUrl);
+        this.socket = io(serverUrl,{
+          transports: ['polling'],
+          withCredentials: true
+        });
         
         this.socket.on('connect', () => {
           console.log('Connected to signaling server');
