@@ -18,11 +18,11 @@ const server = http.createServer(app); // Create HTTP server for Socket.io
 
 const io = new Server(server, {
     cors: {
-        origin: ["https://quick-drop-ten.vercel.app/","http://localhost:5173"], // Allow all origins for Socket.io
-        methods: ['GET', 'POST'],
-        credentials: true, // Allow credentials
-    },
-    transports: ['websocket', 'polling'], // Enable WebSocket and polling transports
+        origin: ["https://quick-drop-ten.vercel.app", "http://localhost:5173"],
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        credentials: true,
+        allowedHeaders: ["Content-Type", "Authorization"]
+    }
 });
 
 // ==============================
@@ -48,11 +48,11 @@ require('./controllers/socket.controller.js')(io);
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || 'localhost';
 
-if(!redisClient.connect()){
+if (!redisClient.connect()) {
     redisClient.connect()
-    .then(() => {
-        console.log('Connected to Redis');
-    });
+        .then(() => {
+            console.log('Connected to Redis');
+        });
 }
 
 // Make sure to use `server.listen()` to listen on both HTTP and WebSocket

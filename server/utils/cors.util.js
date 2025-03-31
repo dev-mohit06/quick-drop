@@ -1,7 +1,8 @@
-const corsOption = {
-    origin: ["https://quick-drop-ten.vercel.app","http://localhost:3000"],
-    methods: "GET,POST,PUT,DELETE",
-    credentials: true, // If using cookies or authentication
-};
+const corsOptions = {
+    origin: ["https://quick-drop-ten.vercel.app", "http://localhost:5173"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"]
+  };
 
-module.exports = corsOption;
+module.exports = corsOptions;
