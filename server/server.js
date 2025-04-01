@@ -14,6 +14,8 @@ const redisClient = require('./config/redis.config.js'); // Redis client
 const routes = require('./routes/index.route.js');
 
 const app = express();
+// Enable CORS with custom options
+app.use(cors(corsOptions));
 const server = http.createServer(app); // Create HTTP server for Socket.io
 
 const io = new Server(server, {
@@ -30,8 +32,8 @@ const io = new Server(server, {
 // 🔹 Middleware Configuration
 // ==============================
 
-// Enable CORS with custom options
-app.use(cors(corsOptions));
+// // Enable CORS with custom options
+// app.use(cors(corsOptions));
 
 // Parse incoming request bodies
 app.use(express.json()); // For JSON data
